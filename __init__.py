@@ -1,7 +1,14 @@
 from comfy_api.latest import ComfyExtension, io
 from typing_extensions import override
 
-from .src.telegram_node import ReadTextFile, SplitText, StackImages, StringList, TelegramSender
+from .src.telegram_node import (
+    Noop,
+    ReadTextFile,
+    SplitText,
+    StackImages,
+    StringList,
+    TelegramSender,
+)
 
 WEB_DIRECTORY = "./js"
 
@@ -15,6 +22,7 @@ class Reminiscorp(ComfyExtension):
             ReadTextFile,
             SplitText,
             StackImages,
+            Noop,
         ]
 
 
